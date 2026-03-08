@@ -3,9 +3,24 @@
 import { useState } from "react";
 import { Button } from "./ui/Button";
 
+type Variant = "primary" | "secondary";
+
+type Action = {
+  label: string;
+  variant: Variant;
+};
+
+type Issue = {
+  id: number;
+  title: string;
+  description: string;
+  status: string;
+  actions: Action[];
+};
+
 export function IssuesCard() {
   
-  const [issues, setIssues] = useState([
+  const [issues, setIssues] = useState<Issue[]>([
     {
       id: 1,
       title: "Your contract requires more cover than you currently have",

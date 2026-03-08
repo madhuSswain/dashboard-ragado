@@ -1,10 +1,10 @@
 
-type variant = "primary" | "secondary";
+type Variant = "primary" | "secondary";
 
 export function Button({ 
     variant = "primary", children 
 }:{
-    variant?: variant;
+    variant?: Variant;
     children: React.ReactNode;
 }) {
 
